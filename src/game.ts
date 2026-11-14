@@ -4,13 +4,15 @@ import {loadImage, EMPTY_SQUARE, Position} from './base.js';
 
 export class PositionRenderingOptions {
 
-    pieceSize: number = 32;
+    pieceSize: number = 96;
 
     lightSquareColor: string = '#f0d9b5';
     darkSquareColor: string = '#b58863';
 
 }
 
+
+const DEVICE_PIXEL_RATIO = window.devicePixelRatio ?? 1;
 
 export class RenderedPosition extends Position {
 
@@ -25,14 +27,19 @@ export class RenderedPosition extends Position {
 
     async render() {
         let ctx = this.ctx;
+        let canvas = ctx.canvas;
         let options = this.options;
-        let pieceSize = options.pieceSize;
-        ctx.canvas.width = this.width * pieceSize;
-        ctx.canvas.height = this.height * pieceSize;
-        let parity = 0;
+        let canvasHeight = canvas.getBoundingClientRect().height * DEVICE_PIXEL_RATIO;
+        let pieceSize = canvasHeight / this.height;
+        let canvasWidth = pieceSize * this.width;
+        canvas.width = canvasWidth;
+        canvas.height = canvasHeight;
+        canvas.style.width = (canvasWidth / DEVICE_PIXEL_RATIO) + 'px';
+        canvas.style.height = (canvasHeight / DEVICE_PIXEL_RATIO) + 'px';
+        console.log(`rendering at canvasWidth = ${canvasWidth}, canvasHeight = ${canvasHeight}, pieceSize = ${pieceSize}`);
         for (let y = 0; y < this.height; y++) {
             for (let x = 0; x < this.width; x++) {
-                ctx.fillStyle = parity === 0 ? options.lightSquareColor : options.darkSquareColor;
+                ctx.fillStyle = (x + y) % 2 === 0 ? options.lightSquareColor : options.darkSquareColor;
                 ctx.fillRect(x * pieceSize, y * pieceSize, pieceSize, pieceSize);
                 let square = this.get([x, y]);
                 if (square !== EMPTY_SQUARE) {
@@ -42,7 +49,6 @@ export class RenderedPosition extends Position {
                     }
                     ctx.drawImage(image, x * pieceSize, y * pieceSize, pieceSize, pieceSize);
                 }
-                parity = (parity + 1) % 2;
             }
         }
     }

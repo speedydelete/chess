@@ -726,8 +726,8 @@ export namespace pieces {
         ]),
         symbol: 'N',
         images: [
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_nlt.svg',
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_ndt.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_nlt45.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_ndt45.svg',
         ],
         emojis: ['♘', '♞'],
     };
@@ -742,8 +742,8 @@ export namespace pieces {
         ], Infinity),
         symbol: 'B',
         images: [
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_blt.svg',
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_bdt.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_blt45.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_bdt45.svg',
         ],
         emojis: ['♗', '♝'],
     };
@@ -758,8 +758,8 @@ export namespace pieces {
         ], Infinity),
         symbol: 'R',
         images: [
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_rlt.svg',
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_rdt.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_rlt45.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_rdt45.svg',
         ],
         emojis: ['♖', '♜'],
     };
@@ -778,8 +778,8 @@ export namespace pieces {
         ], Infinity),
         symbol: 'Q',
         images: [
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_qlt.svg',
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_qdt.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_qlt45.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_qdt45.svg',
         ],
         emojis: ['♕', '♛'],
     };
@@ -798,8 +798,8 @@ export namespace pieces {
         ]),
         symbol: 'K',
         images: [
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_klt.svg',
-            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_kdt.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_klt45.svg',
+            'https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Chess_kdt45.svg',
         ],
         emojis: ['♔', '♚'],
     };
