@@ -1,0 +1,14 @@
+
+/*
+!/.vscode
+!/dist
+!/src
+!/.gitignore
+!/build
+!/LICENSE
+!/package-lock.json
+!/package.json
+!/README.md
+!/tsconfig.json
+
+/dist/*.js

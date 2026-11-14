@@ -1,0 +1,26 @@
+{
+    "name": "analysis",
+    "version": "1.0.0",
+    "type": "module",
+    "files": [
+        "src",
+        "lib"
+    ],
+    "dependencies": {
+        "@minify-html/node": "^0.18.1",
+        "@types/node": "^26.6.6",
+        "esbuild": "^0.28.2",
+        "typescript": "^7.0.2"
+    },
+    "wrecked": {
+        "html": "dist/analysis.html",
+        "showErrors": false,
+        "files": {
+            "<script type=\"module\" src=\"analysis.js\"></script>": "src/analysis.ts",
+            "<link rel=\"stylesheet\" href=\"style.css\">": "dist/style.css"
+        }
+    },
+    "allowScripts": {
+        "esbuild@0.28.2": true
+    }
+}
